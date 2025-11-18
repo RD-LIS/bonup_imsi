@@ -31,6 +31,42 @@
 <!-- ==================================================================================================== -->
 
 
+	
+<style>
+/* 2. 배경 영상을 감싸는 래퍼를 고정 및 전체 화면으로 설정 */
+.video-background-wrapper {
+    position: fixed; /* ⭐️ 화면에 고정 */
+    top: 0;
+    left: 0;
+    width: 100%;    /* ⭐️ width 100% 설정 */
+    height: 100%;   /* height 100% 설정 */
+    overflow: hidden; 
+    z-index: -1;    /* ⭐️ 콘텐츠 뒤로 보내기 */
+}
+
+/* 3. iframe 자체를 16:9 비율을 유지하며 항상 꽉 채우도록 설정 */
+.video-background-wrapper iframe {
+    position: absolute;
+    /* 100%보다 더 크게 설정하여 화면 비율을 맞추며 항상 커버하도록 함 */
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+}
+
+	
+</style>
+
+
+
+
+
+
+
+
+
+	
 <div class="video-background-wrapper">
     <iframe src="https://www.youtube.com/embed/EqXPS1-XkmU?autoplay=1&mute=1&loop=1&playlist=EqXPS1-XkmU&controls=0&vq=hd720"
             frameborder="0" 
@@ -39,6 +75,22 @@
     </iframe>
 </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
 <div class="section01">
 <div class="section01_frame">
 
